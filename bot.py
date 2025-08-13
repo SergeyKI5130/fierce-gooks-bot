@@ -7,10 +7,10 @@ from telegram.ext import (
 from aiohttp import web
 import os
 
+from config import BOT_TOKEN
 from handlers.commands import start, poll, summary
 from handlers.callbacks import handle_option
 
-BOT_TOKEN = os.getenv("BOT_TOKEN")
 
 # 🔹 Telegram бот
 app = ApplicationBuilder().token(BOT_TOKEN).build()
